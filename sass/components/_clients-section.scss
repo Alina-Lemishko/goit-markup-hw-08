@@ -1,0 +1,49 @@
+// .clients {
+//   @include paddings;
+
+//   &__title {
+//     text-align: center;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 50px;
+
+//     font-size: 36px;
+//     line-height: 1.17;
+//   }
+
+//   &__list {
+//     @extend %list;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &__item {
+//     width: 170px;
+//     height: 92px;
+//   }
+
+//   &__link {
+//     @extend %link;
+//     @include centeredFlex;
+//     @include transitioned(border-color);
+//     width: 100%;
+//     height: 100%;
+//     border: 1px solid #afb1b8;
+//     border-radius: 4px;
+
+//     &:hover,
+//     &:focus {
+//       border-color: $accent-color;
+//     }
+//   }
+
+//   &__icon {
+//     @include transitioned(fill);
+//     fill: #afb1b8;
+
+//     .clients__link:hover &,
+//     .clients__link:focus & {
+//       fill: $accent-color;
+//     }
+//   }
+// }
