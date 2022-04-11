@@ -3,8 +3,8 @@
 
   &__container {
     @media screen and (max-width: $tablet) {
-      // padding-top: 16px;
-      // padding-bottom: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
 
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
@@ -55,6 +55,8 @@
       @extend %link;
       color: $primary-text-color;
       @include transitioned(color);
+      padding-top: 32px;
+      padding-bottom: 32px;
 
       &:hover,
       &:focus {
@@ -69,20 +71,13 @@
     &__link--current::after {
       position: absolute;
       left: 0;
+      bottom: -1px;
       content: '';
       display: block;
       width: 100%;
       height: 4px;
       border-radius: 2px;
       background-color: $accent-color;
-
-      @media screen and (min-width: $tablet) and (max-width: $desktop) {
-        bottom: -33px;
-      }
-
-      @media screen and (min-width: $desktop) {
-        bottom: -33px;
-      }
     }
   }
 
