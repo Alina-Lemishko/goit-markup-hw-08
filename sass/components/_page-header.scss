@@ -69,15 +69,17 @@
     }
 
     &__link--current::after {
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $accent-color;
+      @media screen and (min-width: $tablet) {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
+      }
     }
   }
 

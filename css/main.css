@@ -255,6 +255,13 @@ summary {
   display: list-item;
 }
 
+.features__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+}
+
 .header .site-nav__link, .header .address-nav__link {
   display: block;
   font-weight: 500;
@@ -442,16 +449,18 @@ ol {
   color: #2196f3;
 }
 
-.header .site-nav__link--current::after {
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196f3;
+@media screen and (min-width: 768px) {
+  .header .site-nav__link--current::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -661,6 +670,93 @@ ol {
 .button:hover, .button:focus {
   color: #2196f3;
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .features__item {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .features__item {
+    width: 354px;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.features__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
+  background: #f5f4fa;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+@media screen and (max-width: 768px) {
+  .features__title {
+    text-align: center;
+  }
+}
+
+.features__text {
+  line-height: 1.71;
+  color: #757575;
 }
 
 @media screen and (max-width: 767px) {
