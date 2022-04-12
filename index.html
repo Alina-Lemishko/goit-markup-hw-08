@@ -546,9 +546,9 @@
         <!-- -------------------------SUBSCRIBE-------------------------- -->
 
         <div class="subscribe">
-          <form autocomplete="off">
+          <form class="subscribe__form" autocomplete="off">
+            <p class="subscribe__title">Подпишитесь на рассылку</p>
             <label class="subscribe__field">
-              <span class="subscribe__label">Подпишитесь на рассылку</span>
               <input
                 type="e-mail"
                 class="subscribe__input"
@@ -557,12 +557,14 @@
               />
             </label>
           </form>
-          <button type="submit" class="button subscribe__button">
+          <div class="subscribe__button--wrap">
+            <button type="submit" class="button subscribe__button">
             <span>Подписаться </span>
             <svg class="subscribe__icon" width="24" height="24">
               <use href="./images/icons.svg#send"></use>
             </svg>
           </button>
+          </div>
         </div>
       </div>
     </footer>
