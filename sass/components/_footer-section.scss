@@ -1,52 +1,69 @@
 .footer {
   background: #2F303A;
   @include paddings;
-}
 
-.address {
-  @media screen and (max-width: $max-mobile) {
-    margin-bottom: 60px;
+  &__container {
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 
-  &__item:not(:last-child) {
+  .address {
     @media screen and (max-width: $max-mobile) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+      width: 50%;
+    }
+
+    &__item:not(:last-child) {
       margin-bottom: 8px;
     }
-  }
 
-  &__link {
-    @extend %link;
-    display: block;
-    color: $primary-white-color;
+    &__link {
+      @extend %link;
+      display: block;
+      color: $primary-white-color;
 
-    @media screen and (max-width: $max-mobile) {
-      text-align: center;
+      @media screen and (max-width: $max-tablet) {
+        text-align: center;
+      }
     }
-  }
 
-  &__contact {
-    display: block;
-    color: $footer-contact-color;
+    &__contact {
+      display: block;
+      color: $footer-contact-color;
 
-    @media screen and (max-width: $max-mobile) {
-      text-align: center;
+      @media screen and (max-width: $max-tablet) {
+        text-align: center;
+      }
     }
-  }
 
-  &__item .link {
-    @extend %link;
-    @include transitioned(color);
-    font-weight: inherit;
-    line-height: 1.71;
-    text-decoration: none;
-    font-style: normal;
+    &__item .link {
+      @extend %link;
+      @include transitioned(color);
+      font-weight: inherit;
+      line-height: 1.71;
+      text-decoration: none;
+      font-style: normal;
 
-    &:hover,
-    &:focus {
-      color: $accent-color;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
     }
   }
 }
+
 
 // .footer {
 //   padding-top: 60px;

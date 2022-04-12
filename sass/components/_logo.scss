@@ -16,7 +16,7 @@
     line-height: 1.16;
     padding-top: 26px;
     padding-bottom: 26px;
-    margin-right: 88px;
+    // margin-right: 88px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -24,7 +24,7 @@
     line-height: 1.19;
     padding-top: 24px;
     padding-bottom: 25px;
-    margin-right: 93px;
+    // margin-right: 93px;
   }
 
   &--accent {
@@ -37,7 +37,7 @@
     margin-bottom: 20px;
     color: $primary-white-color;
 
-    @media screen and (max-width: $max-mobile) {
+    @media screen and (max-width: $max-tablet) {
       text-align: center;
     }
   }

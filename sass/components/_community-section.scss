@@ -3,6 +3,14 @@
     margin-bottom: 60px;
   }
 
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 12px;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 14px;
@@ -11,7 +19,7 @@
     color: $primary-white-color;
     margin-bottom: 20px;
 
-    @media screen and (max-width: $max-mobile) {
+    @media screen and (max-width: $max-tablet) {
       text-align: center;
     }
   }
@@ -20,7 +28,7 @@
     @extend %list;
     display: flex;
 
-    @media screen and (max-width: $max-mobile) {
+    @media screen and (max-width: $max-tablet) {
       @include centeredFlex;
     }
   }
