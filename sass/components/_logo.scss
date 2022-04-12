@@ -32,8 +32,13 @@
   }
 
   &--footer {
+    display: block;
     padding: 0;
     margin-bottom: 20px;
     color: $primary-white-color;
+
+    @media screen and (max-width: $max-mobile) {
+      text-align: center;
+    }
   }
 }

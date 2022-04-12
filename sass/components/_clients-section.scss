@@ -1,3 +1,77 @@
+.clients {
+  @media screen and (max-width: $max-tablet) {
+    @include paddings;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include paddingsDesktop;
+  }
+
+  &__title {
+    text-align: center;
+
+    @media screen and (max-width: $max-tablet) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  &__item {
+    height: 92px;
+    margin: 15px;
+
+    @media screen and (max-width: $max-mobile) {
+      width: calc((100% - 15px * 4) / 2);
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+      width: calc((100% - 15px * 6) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 15px * 12) / 6);
+    }
+  }
+
+  &__link {
+    @extend %link;
+    @include centeredFlex;
+    @include transitioned(border-color);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+
+  &__icon {
+    @include transitioned(fill);
+    fill: #afb1b8;
+
+    .clients__link:hover &,
+    .clients__link:focus & {
+      fill: $accent-color;
+    }
+  }
+}
+
+
 // .clients {
 //   @include paddings;
 

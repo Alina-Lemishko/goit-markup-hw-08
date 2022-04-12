@@ -1,7 +1,30 @@
  .about {
-   @media screen and (max-width: 767px) {
+   @media screen and (max-width: $max-tablet) {
      display: none;
    }
+
+   @include paddingsDesktop;
+
+   &__list {
+     @extend %list;
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 50px;
+     margin: -15px;
+   }
+
+   &__item {
+     position: relative;
+     width: calc((100% - 15px * 6) / 3);
+     margin: 15px;
+   }
+ }
+
+ .about__title {
+   font-size: 36px;
+   text-align: center;
+   margin-bottom: 50px;
+
  }
 
  // .about {

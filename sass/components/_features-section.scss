@@ -1,7 +1,6 @@
 .features {
   @media screen and (min-width: $mobile) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    @include paddings;
   }
 
   &__list {

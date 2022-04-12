@@ -1,3 +1,37 @@
+.socials {
+  @include centeredFlex;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    @extend %link;
+    @include centeredFlex;
+    @include transitioned(background-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+
+  &__icon {
+    fill: #AFB1B8;
+    @include transitioned(fill);
+
+    .socials__link:hover &,
+    .socials__link:focus & {
+      fill: $primary-white-color;
+    }
+  }
+}
+
+
 // .socials {
 //   @include centeredFlex;
 //   margin-top: 16px;

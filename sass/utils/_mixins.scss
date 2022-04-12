@@ -1,6 +1,11 @@
-@mixin paddings {
+@mixin paddingsDesktop {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+@mixin paddings {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @mixin centeredFlex {
