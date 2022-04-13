@@ -25,9 +25,38 @@
   }
 
   &__nav {
+    @media screen and (max-width: $max-mobile) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-grow: 1;
+    }
+  }
+
+  .menu-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+
+    &__close-icon {
+      display: none;
+    }
+
+    &.is-open .menu-button__close-icon {
+      display: block;
+    }
+
+    &.is-open .menu-button__menu-icon {
+      display: none;
     }
   }
 

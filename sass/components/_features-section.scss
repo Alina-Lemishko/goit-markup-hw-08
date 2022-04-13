@@ -1,6 +1,10 @@
 .features {
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $max-tablet) {
     @include paddings;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include paddingsDesktop;
   }
 
   &__list {
