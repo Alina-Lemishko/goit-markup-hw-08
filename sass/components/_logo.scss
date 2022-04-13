@@ -16,7 +16,7 @@
     line-height: 1.16;
     padding-top: 26px;
     padding-bottom: 26px;
-    // margin-right: 88px;
+    margin-right: 88px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -24,7 +24,7 @@
     line-height: 1.19;
     padding-top: 24px;
     padding-bottom: 25px;
-    // margin-right: 93px;
+    margin-right: 93px;
   }
 
   &--accent {
@@ -34,6 +34,7 @@
   &--footer {
     display: block;
     padding: 0;
+    margin-right: 0;
     margin-bottom: 20px;
     color: $primary-white-color;
 

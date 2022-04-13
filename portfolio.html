@@ -64,8 +64,8 @@
 
     <main>
       <!----------------------------PORTFOLIO ------------------------->
-      <section class="portfolio__section">
-        <div class="container">
+      <section class="portfolio__section container">
+        <div>
           <h1 class="visually-hidden">Примеры работ</h1>
 
           <!-- -----------------------Buttons ------------------------->
@@ -106,7 +106,6 @@
                       src="./images/web-tech.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -129,7 +128,6 @@
                       src="./images/desigh-poster.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -154,7 +152,6 @@
                       src="./images/app-restaurant.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -177,7 +174,6 @@
                       src="./images/project-prime.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -200,7 +196,6 @@
                       src="./images/boxes.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -223,7 +218,6 @@
                       src="./images/web-inspirations.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -248,7 +242,6 @@
                       src="./images/desing-limited.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -271,7 +264,6 @@
                       src="./images/project-lab.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -294,7 +286,6 @@
                       src="./images/app-growing.jpg"
                       class="image"
                       alt="приложение для ресторана"
-                      width="370"
                     />
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -353,7 +344,7 @@
 
         <!-- -----------------------COMMUNITY------------------------- -->
 
-        <div class="community__section">
+        <div class="community">
           <p class="community__title">присоединяйтесь</p>
           <ul class="community__list">
             <li class="community__item list">
@@ -390,9 +381,9 @@
         <!-- -------------------------SUBSCRIBE-------------------------- -->
 
         <div class="subscribe">
-          <form autocomplete="off">
+          <form class="subscribe__form" autocomplete="off">
+            <p class="subscribe__title">Подпишитесь на рассылку</p>
             <label class="subscribe__field">
-              <span class="subscribe__label">Подпишитесь на рассылку</span>
               <input
                 type="e-mail"
                 class="subscribe__input"
@@ -401,12 +392,14 @@
               />
             </label>
           </form>
-          <button type="submit" class="button subscribe__button">
-            <span>Подписаться </span>
-            <svg class="subscribe__icon" width="24" heigh="24">
-              <use href="./images/icons.svg#send"></use>
-            </svg>
-          </button>
+          <div class="subscribe__button--wrap">
+            <button type="submit" class="button subscribe__button">
+              <span>Подписаться </span>
+              <svg class="subscribe__icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
