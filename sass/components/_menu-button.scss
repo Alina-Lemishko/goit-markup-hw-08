@@ -1,0 +1,46 @@
+.menu-button {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &.is-open {
+    position: relative;
+    z-index: 999;
+  }
+
+  &__close-icon {
+    display: none;
+
+    // &:hover,
+    // &:focus {
+    //   fill: $accent-color;
+    // }
+  }
+
+  &.is-open .menu-button__close-icon {
+    display: block;
+    right: 15px;
+    top: 10px;
+    // z-index: 999;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+
+  &.is-open .menu-button__menu-icon {
+    display: none;
+  }
+}

@@ -1,10 +1,21 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 
   &__container {
     @media screen and (max-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding-top: 16px;
       padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      // position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
@@ -24,6 +35,7 @@
     }
   }
 
+
   &__nav {
     @media screen and (max-width: $max-mobile) {
       display: flex;
@@ -37,34 +49,8 @@
     }
   }
 
-  .menu-button {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-
-    @media screen and (min-width: $tablet) {
-      display: none;
-    }
-
-    &__close-icon {
-      display: none;
-    }
-
-    &.is-open .menu-button__close-icon {
-      display: block;
-    }
-
-    &.is-open .menu-button__menu-icon {
-      display: none;
-    }
-  }
 
   .site-nav {
-    @media screen and (max-width: $tablet) {
-      display: none;
-    }
-
     @media screen and (min-width: $tablet) {
       display: flex;
       align-items: center;
@@ -75,17 +61,26 @@
     }
 
     &__item:not(:last-child) {
+      @media screen and (max-width: $max-mobile) {
+        margin-bottom: 32px;
+      }
+
       @media screen and (min-width: $tablet) {
         margin-right: 50px;
       }
     }
 
     &__link {
+      @media screen and (max-width: $max-mobile) {
+        font-size: 40px;
+        letter-spacing: 0.02em;
+      }
+
       @extend %link;
       color: $primary-text-color;
       @include transitioned(color);
-      padding-top: 32px;
-      padding-bottom: 32px;
+      // padding-top: 32px;
+      // padding-bottom: 32px;
 
       &:hover,
       &:focus {
@@ -101,7 +96,7 @@
       @media screen and (min-width: $tablet) {
         position: absolute;
         left: 0;
-        bottom: -1px;
+        bottom: -33px;
         content: '';
         display: block;
         width: 100%;
@@ -113,12 +108,10 @@
   }
 
   .address-nav {
-    @media screen and (max-width: $tablet) {
-      display: none;
-    }
-
-    @media screen and (min-width: $tablet) {
-      display: block;
+    @media screen and (max-width: $max-mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 64px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -127,6 +120,10 @@
     }
 
     &__item:not(:last-child) {
+      @media screen and (max-width: $max-mobile) {
+        margin-top: 32px;
+      }
+
       @media screen and (min-width: $tablet) and (max-width: $desktop) {
         margin-bottom: 10px;
       }
@@ -149,9 +146,31 @@
       &:focus {
         color: $accent-color;
       }
+
+      &--tel {
+        @media screen and (max-width: $max-mobile) {
+          font-weight: 500;
+          font-size: 34px;
+          letter-spacing: 0.02em;
+          color: $accent-color;
+        }
+      }
+
+      &--mail {
+        @media screen and (max-width: $max-mobile) {
+          font-weight: 500;
+          font-size: 24px;
+          letter-spacing: 0.02em;
+          color: $text-color;
+        }
+      }
     }
 
     &__icon {
+      @media screen and (max-width: $max-mobile) {
+        display: none;
+      }
+
       fill: currentColor;
 
       @include transitioned(fill);
