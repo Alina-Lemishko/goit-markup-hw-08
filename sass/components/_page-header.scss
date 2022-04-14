@@ -1,6 +1,14 @@
 .header {
   position: relative;
+  background-color: $primary-white-color;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: $max-mobile) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
 
   &__container {
     @media screen and (max-width: $tablet) {
@@ -29,9 +37,6 @@
     @media screen and (min-width: $desktop) {
       display: flex;
       align-items: center;
-
-      // padding-top: 24px;
-      // padding-bottom: 25px;
     }
   }
 
@@ -79,8 +84,6 @@
       @extend %link;
       color: $primary-text-color;
       @include transitioned(color);
-      // padding-top: 32px;
-      // padding-bottom: 32px;
 
       &:hover,
       &:focus {
@@ -190,102 +193,3 @@
     }
   }
 }
-
-// &__link {
-//   @extend %link;
-//   display: flex;
-//   align-items: center;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-
-//   color: $text-color;
-
-//   @include transitioned(color);
-
-//   // &:hover,
-//   // &:focus {
-//   //   color: $accent-color;
-//   // }
-// }
-
-// .site-nav {
-//   display: flex;
-//   margin-left: 93px;
-
-//   &__item {
-//     position: relative;
-//   }
-
-//   &__link {
-//     @extend %link;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: $primary-text-color;
-
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   }
-
-//   &__link:hover,
-//   &__link:focus {
-//     color: $accent-color;
-//   }
-
-//   &__link--current {
-//     color: $accent-color;
-
-//     &::after {
-//       position: absolute;
-//       left: 0;
-//       bottom: -1px;
-
-//       content: '';
-//       display: block;
-//       width: 100%;
-//       height: 4px;
-//       border-radius: 2px;
-//       background-color: $accent-color;
-//     }
-//   }
-// }
-
-// .site-nav__item+.site-nav__item,
-// .address-nav__item+.address-nav__item {
-//   margin-left: 50px;
-// }
-
-
-
-// .address-nav {
-//   display: flex;
-//   margin-left: auto;
-
-//   &__link {
-//     @extend %link;
-//     display: flex;
-//     align-items: center;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: $text-color;
-
-//     @include transitioned(color);
-
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//     }
-//   }
-
-//   &__icon {
-//     margin-right: 10px;
-//     fill: currentColor;
-
-//     @include transitioned(fill);
-
-//     &:hover,
-//     &:focus {
-//       fill: $accent-color;
-//     }
-//   }
-// }

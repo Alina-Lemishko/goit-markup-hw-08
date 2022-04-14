@@ -7,6 +7,10 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.17;
+
+  @media screen and (max-width: $max-mobile) {
+    padding-top: 60px;
+  }
 }
 
 h1,
@@ -45,6 +49,8 @@ ol {
 }
 
 .image {
-  // display: block;
+  display: block;
+  max-width: 100%;
+  height: auto;
   line-height: 0;
 }

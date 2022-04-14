@@ -22,25 +22,20 @@
   &__close-icon {
     display: none;
 
-    // &:hover,
-    // &:focus {
-    //   fill: $accent-color;
-    // }
-  }
+    &.is-open .menu-button__close-icon {
+      display: block;
+      right: 15px;
+      top: 10px;
+      // z-index: 999;
 
-  &.is-open .menu-button__close-icon {
-    display: block;
-    right: 15px;
-    top: 10px;
-    // z-index: 999;
-
-    &:hover,
-    &:focus {
-      fill: $accent-color;
+      &:hover,
+      &:focus {
+        fill: $accent-color;
+      }
     }
-  }
 
-  &.is-open .menu-button__menu-icon {
-    display: none;
+    &.is-open .menu-button__menu-icon {
+      display: none;
+    }
   }
 }

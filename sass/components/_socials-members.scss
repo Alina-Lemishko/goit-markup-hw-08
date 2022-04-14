@@ -30,39 +30,3 @@
     }
   }
 }
-
-
-// .socials {
-//   @include centeredFlex;
-//   margin-top: 16px;
-
-//   &__item:not(:last-child) {
-//     margin-right: 10px;
-//   }
-
-//   &__link {
-//     @extend %link;
-//     @include centeredFlex;
-//     @include transitioned(background-color);
-//     width: 44px;
-//     height: 44px;
-//     border-radius: 50%;
-//     background-color: transparent;
-
-//     &:hover,
-//     &:focus {
-//       background-color: $accent-color;
-//     }
-//   }
-
-//   &__icon {
-//     fill: #afb1b8;
-
-//     @include transitioned(fill);
-
-//     .socials__item:hover &,
-//     .socials__link:focus & {
-//       fill: $primary-white-color;
-//     }
-//   }
-// }

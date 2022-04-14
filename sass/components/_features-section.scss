@@ -71,39 +71,3 @@
 
   }
 }
-
-
-// .features {
-//   padding-top: 94px;
-
-//   &__list {
-//     @extend %list;
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-
-//   &__item {
-//     width: 270px;
-
-//     &:not(:last-child) {
-//       margin-right: 30px;
-//     }
-//   }
-
-//   &__icon {
-//     @include centeredFlex;
-//     height: 120px;
-//     margin-bottom: 30px;
-//     border-radius: 4px;
-
-//     background: $secondary-bg-color;
-//   }
-
-//   &__text {
-//     margin-top: 10px;
-//     margin-bottom: 0;
-//     line-height: 1.71;
-
-//     color: $text-color;
-//   }
-// }
