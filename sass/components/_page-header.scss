@@ -3,7 +3,7 @@
   background-color: $primary-white-color;
   border-bottom: 1px solid #ececec;
 
-  @media screen and (max-width: $max-mobile) {
+  @media screen and (max-width: $tablet) {
     position: fixed;
     left: 0;
     top: 0;
@@ -11,47 +11,16 @@
   }
 
   &__container {
-    @media screen and (max-width: $tablet) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
+    @include flex(flex, center, space-between);
 
-    @media screen and (min-width: $tablet) {
-      // position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      // padding-top: 26px;
-      // padding-bottom: 26px;
-    }
-
-    @media screen and (min-width: $desktop) {
-      display: flex;
-      align-items: center;
+    @media screen and (max-width: $max-mobile) {
+      @include padding(16px, 16px);
     }
   }
 
 
   &__nav {
-    @media screen and (max-width: $max-mobile) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-grow: 1;
-    }
+    @include flex(flex, center, space-between);
   }
 
 
@@ -89,14 +58,16 @@
       &:focus {
         color: $accent-color;
       }
+
+      &--current {
+        color: $accent-color;
+      }
+
     }
 
-    &__link--current {
-      color: $accent-color;
-    }
 
     &__link--current::after {
-      @media screen and (min-width: $tablet) {
+      @include tablet {
         position: absolute;
         left: 0;
         bottom: -33px;
@@ -117,7 +88,7 @@
       margin-bottom: 64px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include desktop {
       display: flex;
       align-items: center;
     }
@@ -131,7 +102,7 @@
         margin-bottom: 10px;
       }
 
-      @media screen and (min-width: $desktop) {
+      @include desktop {
         margin-right: 30px;
       }
     }
@@ -178,11 +149,11 @@
 
       @include transitioned(fill);
 
-      @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      @include tablet {
         margin-right: 8px;
       }
 
-      @media screen and (min-width: $desktop) {
+      @include desktop {
         margin-right: 10px;
       }
 

@@ -2,25 +2,22 @@
   background-color: $secondary-bg-color;
 
   @media screen and (max-width: $desktop) {
-    @include paddings;
+    @include padding(60px, 60px);
   }
 
-  @media screen and (min-width: $desktop) {
-    @include paddingsDesktop;
+  @include desktop {
+    @include padding(94px, 94px);
   }
 
   &__title {
-    @media screen and (max-width: $desktop) {
-      font-size: 28px;
-      text-align: center;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
 
-      margin-bottom: 30px;
-    }
 
-    @media screen and (min-width: $desktop) {
+    @include desktop {
       font-size: 36px;
       text-align: center;
-
       margin-bottom: 50px;
     }
   }
@@ -28,7 +25,7 @@
   &__list {
     @extend %list;
 
-    @media screen and (min-width: $tablet) {
+    @include tablet {
       display: flex;
       flex-wrap: wrap;
       margin: -15px;
@@ -44,35 +41,19 @@
     padding-bottom: 30px;
 
 
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    @include tablet {
       width: calc((100% - 15px * 4) / 2);
       margin: 15px;
       overflow: hidden;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include desktop {
       width: calc((100% - 15px * 8) / 4);
-      margin: 15px;
-      overflow: hidden;
     }
 
     &:not(:last-child) {
       @media screen and (max-width: $tablet) {
         margin-bottom: 30px;
-      }
-    }
-
-    & img {
-      @media screen and (min-width: $mobile) {
-        width: 450px;
-      }
-
-      @media screen and (min-width: $tablet) and (max-width: $desktop) {
-        height: 374px;
-      }
-
-      @media screen and (min-width: $desktop) {
-        height: 260px;
       }
     }
   }

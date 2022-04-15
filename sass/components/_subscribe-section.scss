@@ -1,9 +1,9 @@
 .subscribe {
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @media screen and (max-width: $max-tablet) {
     margin-top: 60px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @include desktop {
     display: flex;
     align-items: flex-end;
   }
@@ -28,7 +28,7 @@
   }
 
   &__field {
-    @media screen and (min-width: $tablet) {
+    @include tablet {
       display: flex;
       justify-content: center;
     }
@@ -49,11 +49,11 @@
       width: 100%;
     }
 
-    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    @include tablet {
       width: 450px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include desktop {
       width: 358px;
     }
 
@@ -71,13 +71,13 @@
 
   &__button--wrap {
     @media screen and (max-width: $max-tablet) {
-      @include centeredFlex;
+      @include flex(flex, center, center);
     }
   }
 
   &__button {
     @extend %button;
-    @include centeredFlex;
+    @include flex(flex, center, center);
     margin-left: 12px;
     font-size: 16px;
     line-height: 1.88;
@@ -89,6 +89,12 @@
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: $primary-white-color;
+    }
   }
 
   &__icon {

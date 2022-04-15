@@ -7,7 +7,7 @@
     width: 50%;
   }
 
-  @media screen and (min-width: $desktop) {
+  @include desktop {
     margin-top: 12px;
   }
 
@@ -29,7 +29,7 @@
     display: flex;
 
     @media screen and (max-width: $max-tablet) {
-      @include centeredFlex;
+      @include flex(flex, center, center);
     }
   }
 
@@ -39,7 +39,7 @@
 
   &__link {
     @extend %link;
-    @include centeredFlex;
+    @include flex(flex, center, center);
     @include transitioned(background-color);
     width: 44px;
     height: 44px;

@@ -1,16 +1,15 @@
 .footer {
   background: #2F303A;
-  @include paddings;
+  @include padding(60px, 60px);
 
   &__container {
-    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    @include tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    @media screen and (min-width: $desktop) {
-      display: flex;
+    @include desktop {
       justify-content: space-between;
       align-items: baseline;
     }

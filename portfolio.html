@@ -19,46 +19,112 @@
     <!-----------------------------HEADER----------------------------->
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav">
-          <a href="./index.html" class="logo link"
-            ><span class="logo--accent">Web</span>Studio</a
+        <a href="./index.html" class="logo link"
+          ><span class="logo--accent">Web</span>Studio</a
+        >
+
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
           >
+            <use
+              class="menu-button__menu-icon"
+              href="./images/icons.svg#menu"
+            ></use>
+            <use
+              class="menu-button__close-icon"
+              href="./images/icons.svg#cross"
+            ></use>
+          </svg>
+        </button>
 
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link link">Студия</a>
-            </li>
-            <li class="site-nav__item item">
-              <a
-                href="./portfolio.html"
-                class="site-nav__link link site-nav__link--current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav__item item">
-              <a href="" class="site-nav__link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <!-------------------- NAVIGATION  ------------------->
 
-        <ul class="address-nav list">
-          <li class="address-nav__item">
-            <a href="mailto:info@devstudio.com" class="address-nav__link link">
-              <svg class="address-nav__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="address-nav__item">
-            <a href="tel:+380961111111" class="address-nav__link link">
-              <svg class="address-nav__icon" width="10" height="16">
-                <use href="./images/icons.svg#mobile"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="menu-navigation">
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link link">Студия</a>
+              </li>
+              <li class="site-nav__item item">
+                <a
+                  href="./portfolio.html"
+                  class="site-nav__link link site-nav__link--current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item item">
+                <a href="" class="site-nav__link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="auth-wrap">
+            <ul class="address-nav list">
+              <li class="address-nav__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="address-nav__link address-nav__link--mail link"
+                >
+                  <svg class="address-nav__icon" width="16" height="12">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="address-nav__item">
+                <a
+                  href="tel:+380961111111"
+                  class="address-nav__link address-nav__link--tel link"
+                >
+                  <svg class="address-nav__icon" width="10" height="16">
+                    <use href="./images/icons.svg#mobile"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+
+            <ul class="socials-list socials-menu list">
+              <li class="socials-list__item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="socials-list__link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="socials-list__item">
+                <a
+                  href="https://www.twitter.com/"
+                  class="socials-list__link link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="socials-list__item">
+                <a
+                  href="https://www.facebook.com/"
+                  class="socials-list__link link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="socials-list__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  class="socials-list__link link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -102,11 +168,35 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/web-tech.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_1.jpg    1x,
+                          ./images/portfolio/desktop_p_1@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_1.jpg    1x,
+                          ./images/portfolio/tablet_p_1@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_1.jpg    1x,
+                          ./images/portfolio/portfolio_1@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_1.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
+
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -126,11 +216,35 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/desigh-poster.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_2.jpg    1x,
+                          ./images/portfolio/desktop_p_2@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_2.jpg    1x,
+                          ./images/portfolio/tablet_p_2@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_2.jpg    1x,
+                          ./images/portfolio/portfolio_2@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_2.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
+
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -150,11 +264,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/app-restaurant.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_3.jpg    1x,
+                          ./images/portfolio/desktop_p_3@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_3.jpg    1x,
+                          ./images/portfolio/tablet_p_3@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_3.jpg    1x,
+                          ./images/portfolio/portfolio_3@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_3.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -172,11 +309,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/project-prime.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_4.jpg    1x,
+                          ./images/portfolio/desktop_p_4@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_4.jpg    1x,
+                          ./images/portfolio/tablet_p_4@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_4.jpg    1x,
+                          ./images/portfolio/portfolio_4@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_4.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -194,11 +354,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/boxes.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_5.jpg    1x,
+                          ./images/portfolio/desktop_p_5@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_5.jpg    1x,
+                          ./images/portfolio/tablet_p_5@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_5.jpg    1x,
+                          ./images/portfolio/portfolio_5@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_5.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -216,11 +399,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/web-inspirations.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_6.jpg    1x,
+                          ./images/portfolio/desktop_p_6@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_6.jpg    1x,
+                          ./images/portfolio/tablet_p_6@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_6.jpg    1x,
+                          ./images/portfolio/portfolio_6@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_6.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -240,11 +446,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/desing-limited.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_7.jpg    1x,
+                          ./images/portfolio/desktop_p_7@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_7.jpg    1x,
+                          ./images/portfolio/tablet_p_7@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_7.jpg    1x,
+                          ./images/portfolio/portfolio_7@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_7.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -262,11 +491,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/project-lab.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_8.jpg    1x,
+                          ./images/portfolio/desktop_p_8@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_8.jpg    1x,
+                          ./images/portfolio/tablet_p_8@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_8.jpg    1x,
+                          ./images/portfolio/portfolio_8@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_8.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -284,11 +536,34 @@
               <li class="examples__item">
                 <a href="" class="examples__link">
                   <div class="examples__thumb">
-                    <img
-                      src="./images/app-growing.jpg"
-                      class="image"
-                      alt="приложение для ресторана"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./images/portfolio/desktop_p_9.jpg    1x,
+                          ./images/portfolio/desktop_p_9@2x.jpg 2x
+                        "
+                        sizes="(min-width: 1200px) 25wv"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/portfolio/tablet_p_9.jpg    1x,
+                          ./images/portfolio/tablet_p_9@2x.jpg 2x
+                        "
+                        sizes="(min-width: 768px) 50wv"
+                      />
+                      <img
+                        srcset="
+                          ./images/portfolio/portfolio_9.jpg    1x,
+                          ./images/portfolio/portfolio_9@2x.jpg 2x
+                        "
+                        src="./images/portfolio/portfolio_9.jpg"
+                        alt="приложение для ресторана"
+                        sizes="(min-width: 320px) 100wv"
+                        class="image"
+                      />
+                    </picture>
                     <p class="examples__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -406,5 +681,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
