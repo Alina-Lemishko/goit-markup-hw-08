@@ -12,10 +12,6 @@
 
   &__container {
     @include flex(flex, center, space-between);
-
-    @media screen and (max-width: $max-mobile) {
-      @include padding(16px, 16px);
-    }
   }
 
 

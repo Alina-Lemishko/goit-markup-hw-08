@@ -5,19 +5,18 @@
   text-decoration: none;
   font-size: 24px;
   line-height: 1.16;
+  @include padding(16px, 16px);
 
   @include tablet {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    @include padding(26px, 26px);
     margin-right: 88px;
   }
 
   @include desktop {
     font-size: 26px;
     line-height: 1.19;
-    padding-top: 24px;
-    padding-bottom: 25px;
     margin-right: 93px;
+    @include padding(24px, 25px);
   }
 
   &--accent {
